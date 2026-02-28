@@ -1,4 +1,4 @@
-# ⚠️ Insecure Version — Vulnerability Writeup
+#  Insecure Version — Vulnerability Writeup
 
 > **Warning:** This application is intentionally vulnerable. It exists purely for educational demonstration of common web security vulnerabilities. **Never deploy this in production or on a public-facing server.**
 
@@ -28,7 +28,7 @@ This is the vulnerable baseline version of the PHP web application. It was built
 ### 1. SQL Injection — Authentication Bypass
 
 **File:** `index.php`  
-**Severity:** 🔴 CRITICAL  
+**Severity:**  CRITICAL  
 **OWASP:** A03:2021 — Injection
 
 #### Vulnerable Code
@@ -66,7 +66,7 @@ Complete authentication bypass. An attacker can log in as any user — including
 ### 2. SQL Injection — Registration
 
 **File:** `register.php`  
-**Severity:** 🔴 CRITICAL  
+**Severity:**  CRITICAL  
 **OWASP:** A03:2021 — Injection
 
 #### Vulnerable Code
@@ -92,7 +92,7 @@ All three registration fields are injectable. A specially crafted username or em
 ### 3. Stored XSS — Comment Board
 
 **File:** `welcome.php`  
-**Severity:** 🔴 HIGH  
+**Severity:**  HIGH  
 **OWASP:** A03:2021 — Injection (XSS)
 
 #### Vulnerable Code
@@ -138,7 +138,7 @@ Persistent payload executes for every visitor. One post can compromise every act
 ### 4. Reflected XSS — Login Email Field
 
 **File:** `index.php`  
-**Severity:** 🔴 HIGH  
+**Severity:**  HIGH  
 **OWASP:** A03:2021 — Injection (XSS)
 
 #### Vulnerable Code
@@ -176,7 +176,7 @@ The injected script executes in the victim's browser in the context of the appli
 ### 5. DOM-Based XSS — Quick Search
 
 **File:** `welcome.php`  
-**Severity:** 🔴 HIGH  
+**Severity:**  HIGH  
 **OWASP:** A03:2021 — Injection (XSS)
 
 #### Vulnerable Code
@@ -212,7 +212,7 @@ Client-side script execution without any server interaction. Cannot be blocked b
 ### 6. Reflected XSS — ?test GET Parameter
 
 **File:** `welcome.php`  
-**Severity:** 🔴 HIGH
+**Severity:**  HIGH
 
 #### Vulnerable Code
 
@@ -233,7 +233,7 @@ The parameter is echoed directly into the `<h1>` tag with no encoding. Trivial t
 ### 7. Plaintext Password Storage
 
 **File:** `register.php`  
-**Severity:** 🔴 CRITICAL  
+**Severity:**  CRITICAL  
 **OWASP:** A02:2021 — Cryptographic Failures
 
 #### Vulnerable Code
@@ -260,7 +260,7 @@ Any database breach — via SQL injection (vulnerability 1 above), direct server
 ### 8. No CSRF Protection
 
 **File:** All forms  
-**Severity:** 🟠 HIGH  
+**Severity:**  HIGH  
 **OWASP:** A01:2021 — Broken Access Control
 
 #### Vulnerable Code
@@ -295,7 +295,7 @@ When a logged-in user visits `evil.com`, the form auto-submits to the target app
 ### 9. Missing Session Hardening
 
 **File:** All PHP files  
-**Severity:** 🟠 HIGH
+**Severity:**  HIGH
 
 #### Issues
 
@@ -323,7 +323,7 @@ session_start();
 ### 10. Hardcoded Database Credentials
 
 **File:** `config.php`  
-**Severity:** 🟡 MEDIUM
+**Severity:**  MEDIUM
 
 #### Vulnerable Code
 
