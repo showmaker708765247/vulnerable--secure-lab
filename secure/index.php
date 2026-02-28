@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     if (empty($_POST['g-recaptcha-response'])) {
         $errors[] = "Please complete the reCAPTCHA verification.";
     } else {
-        $secretKey    = '6LdgG3MsAAAAACCilnRu-kO_AaB4mN-5hWPZ3fei';
+        $secretKey    = 'KEY HERE';
         $verifyUrl    = 'https://www.google.com/recaptcha/api/siteverify?secret=' . $secretKey . '&response=' . urlencode($_POST['g-recaptcha-response']);
         $responseKeys = json_decode(file_get_contents($verifyUrl), true);
         if (!$responseKeys["success"])
