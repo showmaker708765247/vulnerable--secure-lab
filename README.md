@@ -212,4 +212,3 @@ Code Analysis               Static review, dynamic testing, proof-of-concept exp
 
 ---
 
-*Built for 600IT Secure Programming — Coventry University (PSB)*
